@@ -42,14 +42,14 @@ export default function Login({ onLoginSuccess, onBack }) {
         let headers = { 'Content-Type': 'application/json' };
 
         if (isResetMode) {
-            targetUrl = 'http://localhost:3000/api/users/ForgotUserPassword';
+            targetUrl = `${import.meta.env.VITE_API_URL}/api/users/ForgotUserPassword`;
             payload = { email, newPassword };
             httpMethod = 'PATCH';
         } else if (isNewUser) {
-            targetUrl = 'http://localhost:3000/api/users/create';
+            targetUrl =  `${import.meta.env.VITE_API_URL}/api/users/create`;;
             payload = { username, email, password };
         } else {
-            targetUrl = 'http://localhost:3000/api/users/login';
+            targetUrl = `${import.meta.env.VITE_API_URL}/api/users/login`;
             payload = { email, password };
         }
 

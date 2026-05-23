@@ -12,7 +12,7 @@ export default function HomeAppointmentPage({ switchToAdmin }) {
   useEffect(() => {
     const token = localStorage.getItem('token');
     // Swapped port 5000 to port 3000 to match your Express server configuration
-    fetch('http://localhost:3000/api/image/get', {
+    fetch(`${import.meta.env.VITE_API_URL}/api/image/get`, {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -38,7 +38,7 @@ export default function HomeAppointmentPage({ switchToAdmin }) {
             formData.append('image', selectedFile); // Key matches uploadMiddleWare.single('image')
         }
 
-        fetch('http://localhost:3000/api/image/appointments', {
+        fetch(`${import.meta.env.VITE_API_URL}/api/image/appointments`, {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`

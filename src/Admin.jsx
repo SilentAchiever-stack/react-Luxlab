@@ -13,8 +13,8 @@ export default function AdminDashboard({ onExit, authToken, authRole }) {
     const [uploading, setUploading] = useState(false);
     const formRef = useRef(null);
 
-    const BASE = 'http://localhost:3000/api/image';
-    const BASE_APPT = 'http://localhost:3000/api/appointments';
+    const BASE = `${import.meta.env.VITE_API_URL}/api/image`;
+const BASE_APPT = `${import.meta.env.VITE_API_URL}/api/appointments`;
 
     const authHeaders = {
         'Authorization': `Bearer ${authToken}`,
