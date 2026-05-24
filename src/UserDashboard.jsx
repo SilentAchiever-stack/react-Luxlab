@@ -22,8 +22,8 @@ export default function UserDashboard({ onExit, authToken, authRole }) {
 
     const uploadRef = useRef(null);
     const bookingFileRef = useRef(null);
-    const BASE_IMAGE = 'http://localhost:3000/api/image';
-    const BASE_APPT = 'http://localhost:3000/api/appointments';
+   const BASE_IMAGE = `${import.meta.env.VITE_API_URL}/api/image`;
+const BASE_APPT = `${import.meta.env.VITE_API_URL}/api/appointments`;
 
     const authHeaders = {
         'Authorization': `Bearer ${authToken}`,

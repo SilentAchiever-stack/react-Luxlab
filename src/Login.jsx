@@ -31,6 +31,7 @@ export default function Login({ onLoginSuccess, onBack }) {
     };
 
     const handleSubmit = (e) => {
+        console.log('API URL:', import.meta.env.VITE_API_URL);
         e.preventDefault();
         setErrorMsg(''); 
         setSuccessMsg('');
