@@ -1,16 +1,4 @@
-# React + Vite
+Most barbershop websites are digital flyers — a phone number, maybe a photo. LuxLab started as a question: what would it look like if a barbershop had the same digital presence as a luxury brand? I built the full stack from scratch — a React frontend that feels premium, a Node/Express backend handling real business logic, MongoDB for persistence, and JWT auth for secure user sessions. Every layer was intentional.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+What made it hard?
+Getting auth right took longer than I expected, not just implementing it, but understanding why each decision mattered. Simultaneously keeping the UI feeling luxury while wiring up a real backend taught me that polish and functionality aren't separate concerns. They have to be designed together from the start. 
